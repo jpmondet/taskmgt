@@ -19,6 +19,10 @@ private:
 
 public:
     Task(string subject);
+    //TODO: This constructor should take directly the iostream.
+    //It would be less messy to do the heavy lifting inside this func
+    //instead of outside Task impl. The caller shouldn't need to know the
+    //internals.
     Task(string subjectStr, string startStr, string endStr, string durationStr, string isStoppedstr);
     ~Task(void);
     void StopTask();
