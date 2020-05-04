@@ -24,8 +24,10 @@ public:
     //instead of outside Task impl. The caller shouldn't need to know the
     //internals.
     Task(string subjectStr, string startStr, string endStr, string durationStr, string isStoppedstr);
+    Task(string serializedInfos, bool load);
     ~Task(void);
     void StopTask();
     std::chrono::duration<double> GetDuration();
     string DumpInfos();
+    string GetSubject() { return subject; };
 };
